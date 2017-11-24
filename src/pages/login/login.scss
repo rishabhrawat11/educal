@@ -1,0 +1,67 @@
+page-login {
+
+    .main-body{
+        background-image: url("../../assets/images/bg.jpg");
+         background-color: rgba(0,0,0,.5);
+    }
+  
+    .logo{
+      
+        color:white;
+    }
+    .login-content{
+        
+        height: 400px;
+        
+        font-family: Varela Round;
+        margin-top: 30%;
+    }
+
+    .adhar-card-holder{
+        margin-top: 13%;
+    }
+
+    .adhar-card{
+        border: 2px solid white;
+        margin-top: 40px;
+        color:white;
+        border-radius: 25px;
+       
+    }
+
+    .password-content{
+        border: 2px solid white;
+        margin-top: 20px;
+        color:white;
+        border-radius: 25px;
+    }
+
+    .logo{
+        font-family: Varela Round;
+        letter-spacing: 6px;
+    }
+
+    .submit-btn{
+        margin-top: 20px;
+       
+    }
+
+    
+
+    .login-btn{
+        border-radius: 25px ;
+        
+        background-color: #ec971f;
+        
+        height: 50px;
+       
+        letter-spacing: 3px;
+
+    }
+
+    .password{
+        margin-top: 20px;
+    }
+
+  
+}

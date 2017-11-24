@@ -1,0 +1,54 @@
+page-listuniversity {
+    font-family: Varela Round;
+    .heading-table{
+        margin-top: 50px;
+    }
+    .heading-column{
+        border: 1px solid black;
+    }
+    .content-column{
+        border: 1px solid black;
+        color: #cccccc;
+    }
+    .heading-column{
+        border: 1px solid black;
+    }
+    .search-bar{
+        border: 1px solid #cccccc;
+    }
+
+    table, th, td {
+    border: 1px solid black;
+}
+.uni-tab{
+    padding: 0 5px;
+}
+.cou-tab{
+    padding: 0 5px;
+}
+.eli-tab{
+    padding: 0 5px;
+}
+.dur-tab{
+    padding: 0 5px;
+}
+.sco-tab{
+    padding: 0 5px;
+}
+.sub-tab{
+    padding: 0 5px;
+}
+
+.heading-table{
+    margin-top: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: lightgrey;
+}
+.content-table{
+    background-color: white;
+}
+.border{
+    border: 1px solid black;
+}
+}

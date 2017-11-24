@@ -1,0 +1,55 @@
+
+<ion-header>
+
+  <ion-navbar color="navbar">
+    <ion-buttons left>
+      <button ion-button (click)="onOpenMenu()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>listuniversity</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center>List university</h1>
+
+  <ion-searchbar type="text" placeholder="Enter University name" (ionInput)="getItems($event)"></ion-searchbar>
+
+
+  <!--<table style=" margin-top:40px;">
+  <tr>
+    <th class="uni-tab">Type</th>
+    <th class="cou-tab">Name</th> 
+    <th class="eli-tab">University ID</th>
+    <th class="dur-tab">Password</th>
+    <th class="sco-tab">Courses</th>
+    <th class="sub-tab">Location</th>
+  </tr>
+  <tr>
+   <td text-center>MDU</td>
+    <td text-center>B.Tech</td> 
+    <td>12th years or diploma</td>
+    <td>4th years</td>
+    <td>CSE, ECE</td>
+    <td text-center>DS,C</td>
+  </tr>
+ 
+</table>-->
+
+<div>
+  <ion-row class="heading-table">
+    <ion-col width-25 text-center class="border">Type</ion-col>
+    <ion-col width-25 text-center class="border">University</ion-col>
+    <ion-col width-25 text-center class="border">University ID</ion-col>
+    <ion-col width-25 text-center class="border">Location</ion-col>
+  </ion-row>
+
+  <ion-row class="content-table" *ngFor="let item of university">
+    <ion-col width-25 text-center class="border">{{item.type}}</ion-col>
+    <ion-col width-25 text-center class="border">{{item.university_name}}</ion-col>
+    <ion-col width-25 text-center class="border">{{item.university_ID}}</ion-col>
+    <ion-col width-25 text-center class="border">{{item.Location}}</ion-col>
+  </ion-row>
+</div>
+</ion-content>

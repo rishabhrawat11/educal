@@ -1,0 +1,55 @@
+
+<ion-header>
+
+  <ion-navbar color="navbar">
+    <ion-buttons left>
+      <button ion-button (click)="onOpenMenu()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title >listcourses</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center>Search for any course</h1>
+
+   
+      <ion-searchbar type="text" placeholder="Enter Course name" (ionInput)="getItems($event)"></ion-searchbar>
+      
+    
+   
+
+
+  <!--<table style=" margin-top:40px;">
+  <tr>
+    <th class="uni-tab">University</th>
+    <th class="cou-tab">courses</th> 
+    <th class="eli-tab">Eligibility</th>
+    <th class="dur-tab">Duration</th>
+  </tr>
+  <tr>
+   <td text-center>MDU</td>
+    <td text-center>B.Tech</td> 
+    <td>12th years or diploma</td>
+    <td>4th years</td>
+  </tr>
+ 
+</table>-->
+
+<div>
+  <ion-row class="heading-table">
+    <ion-col width-25 text-center class="border">University</ion-col>
+    <ion-col width-25 text-center class="border">Courses</ion-col>
+    <ion-col width-25 text-center class="border">Eligibility</ion-col>
+    <ion-col width-25 text-center class="border">Duration</ion-col>
+  </ion-row>
+
+  <ion-row class="content-table" *ngFor="let item of courses">
+    <ion-col width-25 text-center class="border">{{item.course_ID}}</ion-col>
+    <ion-col width-25 text-center class="border">{{item.course_name}}</ion-col>
+    <ion-col width-25 text-center class="border">{{item.course_eligibility}}</ion-col>
+    <ion-col width-25 text-center class="border">{{item.course_duration}}  years</ion-col>
+  </ion-row>
+</div>
+</ion-content>

@@ -1,0 +1,36 @@
+
+<ion-header>
+
+  <ion-navbar color="navbar">
+    <ion-buttons left>
+      <button ion-button (click)="onOpenMenu()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>listfaculty</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center>List faculty</h1>
+
+  <ion-searchbar type="text" placeholder="Enter Faculty name" (ionInput)="getItems($event)"></ion-searchbar>
+
+  <div>
+  <ion-row class="heading-table">
+    <ion-col width-20 text-center class="border">Name</ion-col>
+    <ion-col width-20 text-center class="border">Uni</ion-col>
+    <ion-col width-20 text-center class="border">Qual</ion-col>
+    <ion-col width-20 text-center class="border">School</ion-col>
+    <ion-col width-20 text-center class="border">Exp</ion-col>
+  </ion-row>
+
+  <ion-row class="content-table" *ngFor="let item of faculty">
+    <ion-col width-20 text-center class="border">{{item.faculty_name}}</ion-col>
+    <ion-col width-20 text-center class="border">{{item.University}}</ion-col>
+    <ion-col width-20 text-center class="border">{{item.Qualification}}</ion-col>
+    <ion-col width-20 text-center class="border">{{item.School}}</ion-col>
+    <ion-col width-20 text-center class="border">{{item.Experience}} years</ion-col>
+  </ion-row>
+</div>
+</ion-content>

@@ -1,0 +1,73 @@
+<!--
+  Generated template for the Compareuniversity page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navbar">
+    <ion-buttons left>
+      <button ion-button (click)="onOpenMenu()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>Compare University</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+   <h1 text-center>Compare university</h1>
+  <ion-item>
+    <ion-label floating>First University</ion-label>
+    <ion-select [(ngModel)]="firstUniversity">
+      <ion-option *ngFor="let option of university" [value]="option">{{option.university_name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Second University</ion-label>
+    <ion-select [(ngModel)]="secondUniversity">
+      <ion-option *ngFor="let option of university" [value]="option">{{option.university_name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button block class="btn" (click)="compareUniversity(firstUniversity, secondUniversity)">Compare</button>
+
+  <ion-row class="course-comparing" *ngIf="showCompareTabel">
+    <ion-col width-50 class="first-course">
+      <ion-row>
+        <ion-col width-50>University</ion-col>
+        <ion-col width-50>{{firstUniversity.university_name}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>type</ion-col>
+        <ion-col width-50>{{firstUniversity.university_type}} years</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Location</ion-col>
+        <ion-col width-50>{{firstUniversity.Location}}</ion-col>
+      </ion-row>
+       <ion-row>
+        <ion-col width-50>Placement Rate</ion-col>
+        <ion-col width-50>{{firstUniversity.employment_rate}}</ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col width-50 class="first-course">
+      <ion-row>
+        <ion-col width-50>Name</ion-col>
+        <ion-col width-50>{{secondUniversity.university_name}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Type</ion-col>
+        <ion-col width-50>{{secondUniversity.university_type}} years</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Location</ion-col>
+        <ion-col width-50>{{secondUniversity.Location}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Placement Rate</ion-col>
+        <ion-col width-50>{{firstUniversity.employment_rate}}</ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

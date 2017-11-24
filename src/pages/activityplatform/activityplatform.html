@@ -1,0 +1,30 @@
+
+<ion-header>
+
+ <ion-navbar color="navbar">
+    <ion-buttons left>
+      <button ion-button (click)="onOpenMenu()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>Activity Platform</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of activity" class="card">
+  
+  <ion-card-content class="card-content">
+    <ion-row>
+      <ion-col width-30 class="logo"><img src="{{item.logo}}" alt=""></ion-col>
+      <ion-col width-70>
+        <ion-row class="title">{{item.event_name}}</ion-row>
+        <ion-row><span class="label">Venue:</span>  {{item.venue}}</ion-row>
+        <ion-row><span class="label">Day:</span>  {{item.day}}</ion-row>
+        <ion-row><span class="label">Time:</span>  {{item.time}} PM</ion-row>
+        <ion-row><span class="label">Description:</span> {{item.description}}</ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+</ion-content>

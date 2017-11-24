@@ -1,0 +1,23 @@
+<ion-menu [content]="nav" >
+    <ion-header>
+        <ion-toolbar color="navbar">
+            <ion-title class="menu-top"><ion-icon name="contact"></ion-icon> Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="app-holder">
+        <ion-list>
+            <button ion-item (click)="onLoad(dashboard)">Dashboard</button>
+            <button ion-item (click)="onLoad(listCourses)">List courses</button>
+            <button ion-item (click)="onLoad(listFaculty)">List Faculty</button>
+            <button ion-item (click)="onLoad(listUniversity)">List University</button>
+            <button ion-item (click)="onLoad(compareCourse)">Compare courses</button>
+            <button ion-item (click)="onLoad(compareUniversity)">Compare university</button>
+            <button ion-item (click)="onLoad(knowledgePage)">Knowledge platform</button>
+            <button ion-item (click)="onLoad(activityPage)">Activity Center</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #nav></ion-nav>
+
+

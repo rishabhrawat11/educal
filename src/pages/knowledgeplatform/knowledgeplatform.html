@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar color="navbar">
+    <ion-buttons left>
+      <button ion-button (click)="onOpenMenu()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>Knowledgeplatform</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onSave(f)">
+    <ion-textarea placeholder="Enter your query" class="query-text" ngModel name="query"></ion-textarea>
+    <button ion-button type="submit">Submit</button>
+  </form>
+
+  <div *ngFor="let item of query; let postindex = index" class="posts">
+    <h3>{{item.query}}</h3>  
+    
+    <p class="previous-comments">Previous comments</p>
+    <div *ngFor="let comment of item.comments" >
+      <p class="comments">{{comment}}</p>
+    </div>
+    <form #f="ngForm" (ngSubmit)="addComment(postindex,f)">
+    <ion-input type="text" placeholder="write your comment..." class="comment-input" ngModel name="comment"></ion-input>
+    <button ion-button type="submit">Add Comment</button>
+    </form>
+  </div>
+    
+</ion-content>

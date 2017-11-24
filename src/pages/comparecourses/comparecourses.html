@@ -1,0 +1,77 @@
+<ion-header>
+
+  <ion-navbar color="navbar">
+    <ion-buttons left>
+      <button ion-button (click)="onOpenMenu()"><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>comparecourses</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center>Compare course</h1>
+  <ion-item>
+    <ion-label floating>First Course</ion-label>
+    <ion-select [(ngModel)]="firstCourse">
+      <ion-option *ngFor="let option of courses" [value]="option">{{option.course_name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Second Course</ion-label>
+    <ion-select [(ngModel)]="secondCourse">
+      <ion-option *ngFor="let option of courses" [value]="option">{{option.course_name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button block class="btn" (click)="compareCourse(firstCourse, secondCourse)">Compare</button>
+
+  <ion-row class="course-comparing" *ngIf="showCompareTabel">
+    <ion-col width-50 class="first-course">
+
+
+      <ion-row>
+        <ion-col width-50>Course</ion-col>
+        <ion-col width-50>{{firstCourse.course_name}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Duration</ion-col>
+        <ion-col width-50>{{firstCourse.course_duration}} years</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Elgibility</ion-col>
+        <ion-col width-50>{{firstCourse.course_eligibility}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Scope</ion-col>
+        <ion-col width-50>{{firstCourse.scope}}</ion-col>
+      </ion-row>
+       <ion-row>
+        <ion-col width-50>skills</ion-col>
+        <ion-col width-50>{{firstCourse.skills}}</ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col width-50 class="first-course">
+      <ion-row>
+        <ion-col width-50>Course</ion-col>
+        <ion-col width-50>{{secondCourse.course_name}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Duration</ion-col>
+        <ion-col width-50>{{secondCourse.course_duration}} years</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Elgibility</ion-col>
+        <ion-col width-50>{{secondCourse.course_eligibility}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>Scope</ion-col>
+        <ion-col width-50>{{secondCourse.scope}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>skills</ion-col>
+        <ion-col width-50>{{secondCourse.skills}}</ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

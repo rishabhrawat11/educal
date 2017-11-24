@@ -1,0 +1,25 @@
+<ion-content padding class="main-body">
+
+  <div class="login-content">
+
+    <div>
+      <h1 text-center class="logo">Educal</h1>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="onSignin(f)">
+      <ion-input type="text" placeholder="Enter email" class="adhar-card" ngModel name="userId" required></ion-input>
+
+
+      <ion-input type="password" placeholder="Enter password" class="password-content" ngModel name="password" required></ion-input>
+
+
+      <div class="submit-btn">
+        <button ion-button block class="login-btn" type="submit" [disabled]="!f.valid" >Login</button>
+      </div>
+
+    </form>
+
+
+  </div>
+
+</ion-content>
